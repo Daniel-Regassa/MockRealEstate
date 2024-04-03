@@ -1,0 +1,29 @@
+<div class="home">
+
+    <section class="home-form">
+        <h2>Listings</h2>
+        <br>
+        <br>
+        <label for="searchArray">Search Listings By Address:</label>
+        <span class="search-container">
+            <!-- <i class="fa fa-search icon"></i>  -->
+            <input type="text" id="searchArray" ng-model="search.address" autocomplete="off">
+        </span>
+    </section>
+    
+
+    <ul>
+        <a ng-repeat="elem in $ctrl.listingArray | filter:search" href="#!/property/{{elem.id}}">
+            <li class="listing-card">
+                <img src="{{elem.source}}" alt="elem.name" width="300px">
+                <div class="listing-info">
+                    <p>Name: {{elem.name}}</p>
+                    <p>Description: {{elem.desc}}</p>
+                    <p>Address: {{elem.address}}</p>
+                    <p>Price: {{elem.price | currency:"BTC "}}</p>
+                </div>
+            </li>
+        </a>
+        
+    </ul>
+</div>

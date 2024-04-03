@@ -1,0 +1,19 @@
+<div class="property margin-left40px">
+    <!-- <p>id = {{$ctrl.id}}</p>
+    <p>listing = {{$ctrl.listing}}</p> -->
+
+    <li class="listing-card weather">
+        <img src="{{$ctrl.listing.source}}" alt="$ctrl.listing.name" >
+        <div class="listing-info">
+            <img src="{{$ctrl.weather.condition.icon}}" alt="{{$ctrl.weather.condition.text}}"> 
+            <p>Name: {{$ctrl.listing.name}}</p>
+            <p>Address: {{$ctrl.listing.address}}</p>
+            <p>Average Temperature: {{$ctrl.weather.avgtemp_f}}F</p>
+            <p>Max Wind Speed: {{$ctrl.weather.maxwind_mph}} MPH</p>
+            <p>Total Precipitation: {{$ctrl.weather.totalprecip_in}} Inches</p>
+            <p>Description: {{$ctrl.listing.desc}}</p>
+            <p>Price: {{$ctrl.listing.price | currency:"BTC "}}</p>
+
+        </div>
+    </li>
+</div>
